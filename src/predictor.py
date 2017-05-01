@@ -62,17 +62,17 @@ if __name__ == "__main__":
 
     test_in = format_test_vector(test_data, feature_name)
     
-    println("Classifier without weighting")
+    print("Linear SVM without weighting")
     pl, pp = get_prediction(test_in, clf, class_name)
-    println(pl[0], pp[0]*100)
+    print(pl[0], pp[0]*100)
     
-    println("Classifier with weighting")
+    print("Linear SVM with weighting")
     pl, pp = get_prediction(test_in, wclf, class_name)
-    println(pl[0], pp[0]*100)
+    print(pl[0], pp[0]*100)
 
-    println("Classifier with sample weighting")
+    print("Linear SVM with sample weighting")
     pl, pp = get_prediction(test_in, wsclf, class_name)
-    println(pl[0], pp[0]*100)
+    print(pl[0], pp[0]*100)
 
     sys.exit(0)
 
